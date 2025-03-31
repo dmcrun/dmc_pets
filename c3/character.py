@@ -33,14 +33,23 @@ class market_collector:
 
         return f"{self.name} is travelling from {home_coords} to {target_coords}"
     
-    def pickup_goods(self, amount = 0):
-        
+    def pickup_granary_goods(self, goods_available = {}, amount = 0):
+        _dict_target = self.target_good
+        _target = list(_dict_target.keys()[0])
+
+        target_goods_available = goods_available[_target]
+
+
+
+
 
 x = market_collector()
 
 print(x.decide_on_target_good())
 
-print(x.travel(home_coords=(1,1), target_coords=(13,17)))        
+print(x.travel(home_coords=(1,1), target_coords=(13,17)))
+
+# goes 
 
 
 
